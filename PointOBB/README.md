@@ -1,5 +1,22 @@
 Our GPUs: 2 * TeslaV100 (16GB)
 
+김예찬 ->
+```shell script
+conda create --name pointobb python=3.8 -y
+conda activate pointobb
+pip install torch==1.10.2+cu113 torchvision==0.11.3+cu113 -f https://download.pytorch.org/whl/torch_stable.html  
+pip install -U openmim==0.3.9
+mim install mmcv-full==1.7.2
+
+cd PointOBB
+pip install -r requirements/build.txt
+pip install -v -e . --user
+
+chmod +x tools/dist_train.sh
+conda install scikit-image
+```
+
+
 # Prerequisites
 install environment following
 ```shell script
